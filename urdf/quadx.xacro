@@ -469,7 +469,7 @@
           </sensor>
         </link>
 
-        <joint name="my_kinect_joint" type="fixed">
+        <joint name="quad_kinect_joint" type="fixed">
           <pose>0 0 0 0 0 0</pose>
           <parent>base_link</parent>
           <child>quadx_kinect_link</child>
