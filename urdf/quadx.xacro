@@ -398,7 +398,7 @@
   </gazebo>
 
   <gazebo>
-
+     <!-- add kinect -->
      <link name="quadx_kinect_link">
           <pose>0 0 0 0 0 0</pose>
           <collision name="collision">
