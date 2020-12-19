@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="quadx">
+
+  <!-- <xacro:include 
+    filename="$(find quadx)/urdf/sensors.xacro" /> 
+  <xacro:include 
+    filename="$(find quadx)/urdf/materials.xacro" />  
+
+    <physics type="ode">
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.9</erp>
+          <contact_max_correcting_vel>0.1</contact_max_correcting_vel>
+          <contact_surface_layer>0.0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>-1</real_time_update_rate>
+      <max_step_size>0.0020</max_step_size> 
+    </physics> -->
+
+    <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.068083 0.094742 0.12988"
+        rpy="0 0 0" />
+      <mass
+        value="2.2965" />
+      <inertia
+        ixx="0.00010226"
+        ixy="-1.7251E-10"
+        ixz="7.5892E-09"
+        iyy="0.00014326"
+        iyz="5.8728E-07"
+        izz="5.402E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1098 0.1098 0.1098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="-5.5511E-17 0.0087744 2.2274E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.25674" />
+      <inertia
+        ixx="1.1818E-06"
+        ixy="2.7124E-19"
+        ixz="-2.5391E-09"
+        iyy="1.1893E-06"
+        iyz="-4.1487E-20"
+        izz="5.3788E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1098 0.1098 0.1098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Prop_1"
+    type="revolute">
+    <origin
+      xyz="0.16125 -0.041564 0.1078"
+      rpy="1.5708 0 -0.12678" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="-1.8169E-12 0.0087745 -2.7129E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.2567" />
+      <inertia
+        ixx="1.1824E-06"
+        ixy="-6.1747E-19"
+        ixz="-2.5318E-09"
+        iyy="1.1899E-06"
+        iyz="-3.6412E-20"
+        izz="5.3754E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1098 0.1098 0.1098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Prop_2"
+    type="revolute">
+    <origin
+      xyz="-0.025089 -0.041567 0.1078"
+      rpy="1.5708 0 0.095428" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_3">
+    <inertial>
+      <origin
+        xyz="-4.7466E-09 0.0087745 5.2904E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.25674" />
+      <inertia
+        ixx="1.1819E-06"
+        ixy="8.3903E-19"
+        ixz="-2.5323E-09"
+        iyy="1.1894E-06"
+        iyz="-4.965E-20"
+        izz="5.3782E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1098 0.1098 0.1098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Prop_3"
+    type="revolute">
+    <origin
+      xyz="-0.02546 -0.22426 0.1078"
+      rpy="1.5708 0 3.1081" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_4">
+    <inertial>
+      <origin
+        xyz="0.068083 0.094742 0.12988"
+        rpy="0 0 0" />
+      <mass
+        value="0.25674" />
+      <inertia
+        ixx="0.00010226"
+        ixy="-1.7251E-10"
+        ixz="7.5892E-09"
+        iyy="0.00014326"
+        iyz="5.8728E-07"
+        izz="5.402E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/Link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1098 0.1098 0.1098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadx/meshes/Link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Prop_4"
+    type="revolute">
+    <origin
+      xyz="0.16163 -0.22426 0.1078"
+      rpy="1.5708 0 -3.0959" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Black</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+
+  <gazebo reference="link_1">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+
+  <gazebo reference="link_2">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+
+  <gazebo reference="link_3">
+    <material>Gazebo/White</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+
+  <gazebo reference="link_4">
+    <material>Gazebo/White</material>
+    <turnGravityOff>true</turnGravityOff>
+  </gazebo>
+
+  <model>
+   <!--add lidar-->
+        <link name="hokuyo_link">
+          <pose>0 0 0 0 0 0</pose>
+          <collision name="collision">
+            <pose>0 0 0.3 0 0 0</pose>
+            <geometry>
+              <box>
+                <size>0.1 0.1 0.1</size>
+              </box>
+            </geometry>
+          </collision>
+          <visual name="visual">
+            <pose>0 0 0.27 0 0 0</pose>
+            <geometry>
+              <mesh filename="package://quadx/snsr_dep/hokuyo.dae"/>
+            </geometry>
+          </visual>
+          <inertial>
+            <mass>0.016</mass>
+            <inertia>
+               <ixx>0.0001</ixx>
+               <ixy>0</ixy>
+               <ixz>0</ixz>
+               <iyy>0.0001</iyy>
+               <iyz>0</iyz>
+               <izz>0.0001</izz>
+               <!-- low intertia necessary to avoid not disturb the drone -->
+            </inertia>
+          </inertial>
+
+          <sensor type="ray" name="laser">
+            <pose>0 0 0.3 0 0 1.57</pose>
+            <visualize>true</visualize>
+            <update_rate>10</update_rate>
+            <ray>
+              <scan>
+                <horizontal>
+                  <samples>1024</samples>
+                  <resolution>1</resolution>
+                  <min_angle>-3.141593</min_angle>
+                  <max_angle>3.141593</max_angle>
+                </horizontal>
+              </scan>
+              <range>
+                <min>0.1</min>
+                <max>30</max>
+                <resolution>0.1</resolution>
+              </range>
+              <!-- <noise>
+                <type>Gaussian</type>
+                <mean>0.0</mean>
+                <stddev>0.01</stddev>
+              </noise> -->
+            </ray>
+            <plugin name="hokuyo_node" filename="libgazebo_ros_laser.so">
+              <robotNamespace></robotNamespace>
+              <topicName>/spur/laser/scan</topicName>
+              <frameName>/hokuyo_sensor_link</frameName>
+            </plugin>
+          </sensor>
+        </link>
+
+        <joint name="hokuyo_joint" type="fixed">
+          <pose>0 0 0 0 0 0</pose>
+          <parent>base_link</parent>
+          <child>hokuyo_link</child>
+        </joint>
+
+  </model>
+
+</robot>
