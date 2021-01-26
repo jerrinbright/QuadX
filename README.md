@@ -12,4 +12,8 @@ Progress Log:
 18/12/2000 - Exported the drone model from Solidworks platform to URDF<br><br>
 <img src="https://github.com/jerrie-bright/QuadX/blob/main/img/sw_assembly.png" width="2000"/>
 
-<br> Currently working on the sensor part of the drone
+<br><br><br>
+18/12/2000 - Added sensors including 3D LIDAR, Kinect, IMU.<br><br>
+<img src="https://github.com/jerrie-bright/QuadX/blob/main/img/sensors.jpg" width="2000"/>
+
+<br> Currently working on the mapping of the drone in unknown environmnents
